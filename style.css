@@ -1,0 +1,49 @@
+:root{--ink:#1c2430;--paper:#f5f7fa;--card:#ffffff;--denim:#2b4a7a;--denim-d:#1d3557;--tag:#ffd23f;--pink:#ff8fb3;--muted:#5b6676;--line:#d5dbe4;
+--head:'Bricolage Grotesque','Trebuchet MS',Arial,sans-serif;--body:'Source Serif 4',Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.1rem;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--denim)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.site-header{background:var(--denim-d);color:#fff}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{font-family:var(--head);font-weight:800;font-size:1.5rem;color:#fff;text-decoration:none;letter-spacing:-.02em}
+.brand span{background:var(--tag);color:var(--ink);padding:0 8px;border-radius:4px;margin-left:4px;transform:rotate(-3deg);display:inline-block}
+.site-header nav a{color:#fff;font-family:var(--head);text-decoration:none;margin-left:18px;font-weight:600}
+.site-header nav a:hover{text-decoration:underline}
+.hero{background:var(--denim);color:#fff;padding:56px 0 64px;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 12px)}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.hero h1{font-family:var(--head);font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;margin:0 0 16px;letter-spacing:-.03em;font-weight:800}
+.hero p{font-size:1.2rem;max-width:34em;margin:0}
+.price-tag{justify-self:center;background:var(--tag);color:var(--ink);font-family:var(--head);padding:34px 28px 26px;border-radius:10px;text-align:center;transform:rotate(4deg);position:relative;box-shadow:0 8px 0 rgba(0,0,0,.18);max-width:260px}
+.price-tag::before{content:"";position:absolute;top:12px;left:50%;width:16px;height:16px;margin-left:-8px;background:var(--denim);border-radius:50%}
+.price-tag b{display:block;font-size:3rem;line-height:1;font-weight:800}
+.price-tag span{display:block;margin-top:8px;font-weight:600}
+h2.section-title{font-family:var(--head);font-size:1.8rem;margin:48px 0 20px;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;padding-bottom:56px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-4px)}
+.card img{aspect-ratio:3/2;object-fit:cover;width:100%;border-bottom:2px solid var(--ink)}
+.card-body{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
+.card h3{font-family:var(--head);font-size:1.25rem;line-height:1.25;margin:0 0 8px}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a::after{content:"";position:absolute;inset:0}
+.card{position:relative}
+.card p{margin:0;color:var(--muted);font-size:1rem;line-height:1.55}
+article{max-width:720px;margin:0 auto;padding:36px 20px 24px}
+article h1{font-family:var(--head);font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;letter-spacing:-.03em;margin:8px 0 18px}
+.crumbs{font-family:var(--head);font-size:.95rem}
+.lead{font-size:1.25rem;color:var(--muted)}
+.hero-img{border:2px solid var(--ink);border-radius:6px;margin:24px 0 8px;width:100%;aspect-ratio:3/2;object-fit:cover}
+article h2{font-family:var(--head);font-size:1.6rem;margin:36px 0 8px;letter-spacing:-.02em}
+article ul{padding-left:1.2em}
+.more{background:#fff;border-top:2px solid var(--ink);padding:8px 0 48px}
+.more ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.more a{display:block;padding:12px 14px;border:2px solid var(--ink);border-radius:6px;font-family:var(--head);font-weight:600;text-decoration:none;color:var(--ink);background:var(--paper)}
+.more a:hover{background:var(--tag)}
+.site-footer{background:var(--ink);color:#c9d1dc;padding:28px 0;font-size:.95rem;font-family:var(--head)}
+.site-footer a{color:#fff}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.price-tag{justify-self:start;transform:rotate(2deg)}.site-header nav a{margin-left:0;margin-right:16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
